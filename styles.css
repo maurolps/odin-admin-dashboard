@@ -1,3 +1,6 @@
+body {
+  margin: 0 auto;
+}
 .main {
   display: grid;
   grid-template: 1fr 5fr / 1fr 3fr; 
@@ -29,23 +32,65 @@
   grid-template-areas: 
   'projects announcements'
   'projects trending';
+  padding: 15px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .projects {
   background-color: aqua;
   grid-area: projects;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+  gap: 15px;
+  padding: 15px;
 }
 
 .projects .cards{
+  padding: 20px;
+  background-color: bisque;
+  height: 150px;
+}
 
+.projects .cards-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.projects p {
+  font-size: 0.9rem;
 }
 
 .announcements {
   background-color: red;
   grid-area: announcements;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.announcements .news {
+  background-color: green;
+}
+
+.announcements .news-title {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.announcements p {
+  font-size: 0.8rem;
 }
 
 .trending {
   background-color: orange;
   grid-area: trending;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.trend {
+  background-color: brown;
 }
