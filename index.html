@@ -7,12 +7,12 @@
   <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css">
+
   <link rel="stylesheet" href="styles.css">
-/>
 </head>
 <body>
   <div class="main">
-    <div class="header">
+    <header>
         <div class="searchbar">
           <input type="search" id="search" name="search" placeholder="Search" />
         </div>
@@ -23,9 +23,9 @@
           <div role="button" class="btns">Upload</div>
           <div role="button" class="btns">Share</div>
         </div>
-    </div>
+      </header>
     <div class="sidebar">
-      <div class="logo">Dashboard</div>
+      <div class="logo"><a href="#"><img src="icons/dashboard.png" class="img-logo">Dashboard</img></a></div>
       <div class="links1">
         <ul>
           <li id="list1"><a href="#"><img src="icons/home.svg" class="img-list">Home</img></li>
@@ -34,15 +34,16 @@
           <li id="list4"><a href="#"><img src="icons/clock-time-three.svg" class="img-list">History</img></a></li>
           <li id="list5"><a href="#"><img src="icons/calendar-check.svg" class="img-list">Tasks</img></a></li>
           <li id="list6"><a href="#"><img src="icons/account-group.svg" class="img-list">Communities</img></a></li>
-          <li></li>
+          <br>
           <li id="list7"><a href="#"><img src="icons/cog.svg" class="img-list">Settings</img></a></li>
           <li id="list8"><a href="#"><img src="icons/head-question.svg" class="img-list">Support</img></a></li>
           <li id="list9"><a href="#"><img src="icons/lock.svg" class="img-list">Privacy</img></a></li>
         </ul>
       </div>
-      <div class="footer"><small><a href="https://github.com/maurolps">maurolps</a></small></div>
+      <footer><small><a href="https://github.com/maurolps"><img src="icons/github.svg" class="img-list">maurolps</img></a></small></footer>
     </div>
     <div class="pcontainer">
+      <div class="ptitle"><h4>Your Projects</h4></div>
       <div class="projects">
         <div class="cards">
           <p class="cards-title">Super Cool Project</p>

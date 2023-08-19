@@ -2,26 +2,29 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  background-color: #e2e8f0;
 }
 .main {
   display: grid;
-  grid-template: minmax(150px,1fr) 5fr / clamp(150px, 20%, 200px) 3fr; 
+  grid-template: minmax(150px,1fr) max-content / clamp(150px, 20%, 200px) 3fr; 
   grid-template-areas: 
   'sidebar header'
   'sidebar container';
   background-color: rgb(0, 0, 0);
-  height: 100vh;
   width: clamp(400px, 100vw, 1300px);
-  /* width: 80vw; */
+  box-shadow: 2px 0px var(--primary);
+  background-color: aqua;
 }
 
-.header {
-  background-color: rgb(171, 228, 171);
+header {
+  background-color: var(--primary-inverse);
   grid-area: header;
   display: grid;
   padding: 10px;
-  grid-template-columns: 2fr minmax(180px,1fr);
+  grid-template-columns: 2fr minmax(220px,1fr);
   align-items: center;
+  box-shadow: 0px 2px #d1d1d1;
+  z-index: 1;
 }
 
 .username {
@@ -63,38 +66,50 @@ body {
 }
 
 .pcontainer {
-  background-color: rgb(236, 224, 201);
+  background-color: #e2e8f0;
   grid-area: container;
   display: grid;
-  grid-template: 1fr 1fr / 3fr minmax(150px,1fr);;
+  grid-template: 100px 1fr 1fr / 3fr 275px; 
   grid-template-areas: 
+  'ptitle ptitle'
   'projects announcements'
   'projects trending';
-  padding: 15px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  background-color: red;
 }
 
 p{
-  margin: 5px;;
+  margin: 5px;
+}
+
+.ptitle {
+  background-color: green;
+  grid-area: ptitle;
+  position: relative;
+
+  padding-left: 100px;
 }
 
 .projects {
-  background-color: aqua;
   grid-area: projects;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  grid-template-rows: repeat(auto-fit, 200px);
   gap: 15px;
   padding: 15px;
+  padding-top: 0;
   align-items: center;
+  background-color: yellow;
 }
 
 .projects .cards{
   padding: 20px;
-  background-color: bisque;
+  background-color: var(--primary-inverse);
   height: 150px;
-  border-style: solid;
+  border-left-style: solid;
+  border-color: #f0b429;
   border-radius: 10px;
+  box-shadow: 0px 2px 2px #d1d1d1;
+  z-index: 1;
 }
 
 .projects .cards-title {
@@ -107,22 +122,21 @@ p{
 }
 
 .announcements {
-  background-color: red;
   grid-area: announcements;
   display: flex;
 
 }
 
 .announcements .news-container {
-  background-color: blue;
   display: grid;
   grid-template-rows: repeat(3,1fr);
   gap: 10px;
   margin: 15px;
-}
-
-.news-container .news {
-  background-color: green;
+  padding: 10px; 
+  background-color: var(--primary-inverse);
+  box-shadow: 0px 2px 2px #d1d1d1;
+  z-index: 1;
+  border-radius: 10px;
 }
 
 .announcements .news-title {
@@ -135,34 +149,39 @@ p{
 }
 
 .trending {
-  background-color: orange;
   grid-area: trending;
   display: flex;
 }
 
 .trend-container {
-  background-color: green;
+  background-color: var(--primary-inverse);
+  box-shadow: 0px 2px 2px #d1d1d1;
+  z-index: 1;
+  border-radius: 10px;
   display: grid;
   margin: 15px;
-
-  gap: 10px;
-  /* width: 100%; */
+  padding: 10px;
+  width: 100%;
 }
 
-.trend a,p {
+.trend a {
   color: black;
   font-size: 0.7rem;
 }
 
-.trend {
-  flex: 1;
-  font-size: 0.8rem;
-  background-color: brown;
+.trend p{
+  font-size: 0.5rem;
 }
 
 .img-list {
   width: 20px;
   margin-right: 15px;
+  filter: invert();
+}
+
+.img-logo {
+  width: 40px;
+  margin-right: 10px;
   filter: invert();
 }
 
