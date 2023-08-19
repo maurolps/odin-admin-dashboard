@@ -4,41 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin dashboard</title>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css">
   <link rel="stylesheet" href="styles.css">
+/>
 </head>
 <body>
   <div class="main">
     <div class="header">
-        <div class="searchbar">Search bar</div>
+        <div class="searchbar">
+          <input type="search" id="search" name="search" placeholder="Search" />
+        </div>
         <div class="welcome">Welcome message</div>
         <div class="username">Username</div>
         <div class="action-buttons">
-          <button>New</button>
-          <button>Upload</button>
-          <button>Share</button>
+          <div role="button" class="btns">New</div>
+          <div role="button" class="btns">Upload</div>
+          <div role="button" class="btns">Share</div>
         </div>
     </div>
     <div class="sidebar">
       <div class="logo">Dashboard</div>
       <div class="links1">
         <ul>
-          <li>Home</li>
-          <li>Profile</li>
-          <li>Messages</li>
-          <li>History</li>
-          <li>Tasks</li>
-          <li>Communities</li>
+          <li id="list1"><a href="#"><img src="icons/home.svg" class="img-list">Home</img></li>
+          <li id="list2"><a href="#"><img src="icons/card-account-details-outline.svg" class="img-list">Profile</img></a></li>
+          <li id="list3"><a href="#"><img src="icons/message.svg" class="img-list">Messages</img></a></li>
+          <li id="list4"><a href="#"><img src="icons/clock-time-three.svg" class="img-list">History</img></a></li>
+          <li id="list5"><a href="#"><img src="icons/calendar-check.svg" class="img-list">Tasks</img></a></li>
+          <li id="list6"><a href="#"><img src="icons/account-group.svg" class="img-list">Communities</img></a></li>
+          <li></li>
+          <li id="list7"><a href="#"><img src="icons/cog.svg" class="img-list">Settings</img></a></li>
+          <li id="list8"><a href="#"><img src="icons/head-question.svg" class="img-list">Support</img></a></li>
+          <li id="list9"><a href="#"><img src="icons/lock.svg" class="img-list">Privacy</img></a></li>
         </ul>
       </div>
-      <div class="links2">
-        <ul>
-          <li>Settings</li>
-          <li>Support</li>
-          <li>Privacy</li>
-        </ul>
-      </div>
+      <div class="footer"><small><a href="https://github.com/maurolps">maurolps</a></small></div>
     </div>
-    <div class="container">
+    <div class="pcontainer">
       <div class="projects">
         <div class="cards">
           <p class="cards-title">Super Cool Project</p>
@@ -54,7 +58,7 @@
         </div>
         <div class="cards">
           <p class="cards-title">Easy Peasy App</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur veniam aspernatur fugiat dolore architecto quos?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur veniam</p>
         </div>
         <div class="cards">
           <p class="cards-title"> Ad Blocker</p>
